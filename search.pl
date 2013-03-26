@@ -15,7 +15,7 @@ for my $url_template(@a_url_template){
 	my $total_count = 0 ;
 	if ( $url_template =~ /1%2C%2C(\d+)$/ ){
 		$total_count = $1 ;	
-		$url_template =~ s/1%2C%2C(\d+)$/<<page>>%2C%2C(\d+)/g ;
+		$url_template =~ s/1%2C%2C(\d+)$/<<page>>%2C%2C$total_count/g ;
 	}
 
 	`mkdir -p $dir_output/tmp` ;
